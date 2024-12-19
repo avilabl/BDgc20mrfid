@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const dieta_controller_1 = require("../controllers/dieta.controller");
+const router = (0, express_1.Router)();
+router.get('/', dieta_controller_1.getDietas);
+router.get('/:cod', dieta_controller_1.getDietasxID);
+router.delete('/:cod', dieta_controller_1.deleteDieta);
+router.post('/', dieta_controller_1.postDieta);
+router.put('/:cod', dieta_controller_1.putDieta);
+exports.default = router;
